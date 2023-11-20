@@ -48,8 +48,10 @@
             position: relative; /* Added position:relative for proper hover effect */
         }
 
-        .site-card:hover .site-link {
-            transform: scale(1.1); /* Increase the size on hover */
+        .site-card:hover .site-link:hover,
+        .site-link:active {
+            text-decoration: underline;
+            transform: scale(1.1) translateY(-5px); /* Scale up and move up slightly on hover or touch */
         }
 
         .site-card h2 {
@@ -70,10 +72,6 @@
             margin-bottom: 10px;
             transition: transform 0.3s ease-in-out;
             transform-origin: center bottom; /* Set the transformation origin to the bottom center */
-        }
-
-        .site-link:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
