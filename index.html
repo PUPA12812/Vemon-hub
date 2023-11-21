@@ -56,13 +56,13 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
-            position: relative; /* Added position:relative for proper hover effect */
+            position: relative;
         }
 
         .site-card:hover .site-link:hover,
         .site-link:active {
             text-decoration: underline;
-            transform: scale(1.1) translateY(-5px); /* Scale up and move up slightly on hover or touch */
+            transform: scale(1.1) translateY(-5px);
         }
 
         .site-card h2 {
@@ -81,15 +81,29 @@
         .site-link {
             display: block;
             margin-bottom: 10px;
-            transition: transform 0.3s ease-in-out;
-            transform-origin: center bottom; /* Set the transformation origin to the bottom center */
+            position: relative;
         }
 
-        /* Media Query for Mobile */
-        @media only screen and (max-width: 600px) {
-            .announcement {
-                margin-bottom: 10px;
-            }
+        .tooltip {
+            visibility: hidden;
+            width: max-content;
+            background-color: #4a5568;
+            color: #cbd5e0;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the link */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .site-link:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
 </head>
@@ -104,26 +118,46 @@
         <div class="site-card">
             <h2>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                 </svg>
                 www.roblox.com.pr (⭐ BEST , pr = profile)
             </h2>
-            <a class="site-link" href="https://www.roblox.com.pr/controlPage/create">Click to go to Generator</a>
-            <a class="site-link" href="https://www.roblox.com.pr/controlPage">Click to go to Controller</a>
-            <a class="site-link" href="https://www.roblox.com.pr/discover">Click to go to Discover Page</a>
+            <a class="site-link" href="https://www.roblox.com.pr/controlPage/create">
+                Click to go to Generator
+                <span class="tooltip">This link leads to the generator page.</span>
+            </a>
+            <a class="site-link" href="https://www.roblox.com.pr/controlPage">
+                Click to go to Controller
+                <span class="tooltip">This link leads to the controller page.</span>
+            </a>
+            <a class="site-link" href="https://www.roblox.com.pr/discover">
+                Click to go to Discover Page
+                <span class="tooltip">This link leads to the discover page.</span>
+            </a>
         </div>
 
         <!-- Additional Site Card -->
         <div class="site-card">
             <h2>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                 </svg>
                 Another Website
             </h2>
-            <a class="site-link" href="https://example.com/generator">Click to go to Generator</a>
-            <a class="site-link" href="https://example.com/controller">Click to go to Controller</a>
-            <a class="site-link" href="https://example.com/discover">Click to go to Discover Page</a>
+            <a class="site-link" href="https://example.com/generator">
+                Click to go to Generator
+                <span class="tooltip">This link leads to the generator page on another website.</span>
+            </a>
+            <a class="site-link" href="https://example.com/controller">
+                Click to go to Controller
+                <span class="tooltip">This link leads to the controller page on another website.</span>
+            </a>
+            <a class="site-link" href="https://example.com/discover">
+                Click to go to Discover Page
+                <span class="tooltip">This link leads to the discover page on another website.</span>
+            </a>
         </div>
     </div>
 
