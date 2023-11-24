@@ -1,0 +1,4 @@
+[02-Sep-2022 16:47:36 America/Chicago] PHP Warning:  file_get_contents(https://users.roblox.com/v1/users/3697650161/groups/roles): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home3/robloxr2/public_html/web/v1/users1.php on line 6
+[02-Sep-2022 16:50:38 America/Chicago] PHP Warning:  file_get_contents(https://users.roblox.com/v1/users/228778231/groups/roles): Failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /home3/robloxr2/public_html/web/v1/users1.php on line 6
